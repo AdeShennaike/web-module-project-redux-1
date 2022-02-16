@@ -1,11 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as actionCreators from '../actions/movieActions'
 import MovieListItem from './MovieListItem';
 import MovieFooter from './MovieFooter';
 
 const MovieList = (props)=> {
-
+console.log(props)
     return (
         <div className="col">
             <table className="table table-striped table-hover">
@@ -32,8 +31,9 @@ const MovieList = (props)=> {
 }
 
 const mapStateToProps = (state) => {
+    console.log(state)
     return{
-        movies: state.movies
+        movies: state.movieReducer.movies
     }
 }
 
